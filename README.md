@@ -1,9 +1,7 @@
 # server-performance-stats-project
 DevOps Project
 
-Run first the package_installation.sh
-
-then run the server_stats.sh
+Run first the package_installation.sh then run the server_stats.sh
 
 Thanks :^) 
 
