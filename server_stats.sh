@@ -5,6 +5,8 @@ echo ""
 grep "PRETTY_NAME" /etc/os-release	 
 grep "VERSION=" /etc/os-release
 echo ""
+uptime
+echo ""
 
 echo "===================================="
 echo "      Server Performance Stats      "
