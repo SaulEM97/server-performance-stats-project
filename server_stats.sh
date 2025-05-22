@@ -13,15 +13,14 @@ echo "      Server Performance Stats      "
 echo "===================================="
 
 #Total CPU Usage
-echo "Total CPU Usage: $(mpstat -A | awk 'FNR == 4 {print "%" (100-$12)}')"
+echo "Total CPU Usage: $(mpstat -A | awk 'FNR == 4 {print "%" (100-$13)}')"
 echo ""
-mpstat -A | awk 'FNR == 4 {print "User: %" $3 " |  System: %" $5  " |  Idle: %" $12 }'
 
 #Total Memory Usage
 echo "-------------------------------------"
 echo "Total Memory Usage:"
 echo ""
-free -h | awk 'FNR == 2 {print "Used: " $3 " (%" ($3/$2*100) ")" " | buff/cache: " $6 " (%" ($6/$2*100) ")" " | Free: " $4 " (%" ($4/$2*100) ")" }'
+free -h | awk 'FNR == 2 {print "Used: " $3 " (%" ($3/$2*100) ")" " | Free: " $4 " (%" (($4/1024)/$2*100) ")" }'
 
 #Total Disk Usage
 echo "-------------------------------------"
